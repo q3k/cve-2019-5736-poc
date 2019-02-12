@@ -1,0 +1,10 @@
+CVE-2019-5736 Proof of Concept
+==============================
+
+This appends a string to the host runc binary. Bring your own payload (see stage2.c).
+
+To run:
+    docker build -t cve .
+    docker run cve
+    strings /usr/bin/docker-runc | tail -n 2
+
